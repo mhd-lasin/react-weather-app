@@ -10,24 +10,3 @@
   display: grid;
   background: #e2d4ff;
 }
-.weather-data{
-  width: 100%;
-  margin-top: 40px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-}
-.weather-data .col{
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 22px;
-}
-.weather-data .col span{
-  display: block;
-  font-size: 16px;
-}
-.weather-data .col img{
-  width: 26px;
-  margin-top: 5px;
-}

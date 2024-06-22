@@ -7,6 +7,7 @@ import humidity_icon from "../assets/humidity.png";
 import rain_icon from "../assets/rain.png";
 import snow_icon from "../assets/snow.png";
 import wind_icon from "../assets/wind.png";
+import clear_screen_icon from "../assets/clear_screen.png"
 import { useEffect } from "react";
 import { useState } from "react";
 import { useRef } from "react";
@@ -14,6 +15,14 @@ import { useRef } from "react";
 const Weather = () => {
   const inputRef = useRef();
   const [weatherData, setWeatherData] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [clearWeather, setClearWeather] = useState("");
+
+  const clearHandle = ()=>{
+  const clearValue = inputRef.current.value = "";
+    setClearWeather(clearValue);
+  }
+
   const allIcons = {
     "01d": clear_icon,
     o1n: clear_icon,
@@ -72,6 +81,7 @@ const Weather = () => {
           alt=""
           onClick={() => search(inputRef.current.value)}
         />
+        <img src={clear_screen_icon} alt="" onClick={clearHandle}/>
       </div>
       {weatherData ? (
         <>
